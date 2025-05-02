@@ -1,5 +1,16 @@
-docker build -t qemu-novnc .
+docker login
+docker build -t qemu-virtualization .
+docker run -it --rm -e USER=root qemu-virtualization
 
 open the OS
 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 -vnc :1
+
+git clone https://github.com/novnc/noVNC.git
+cd noVNC
 ./utils/novnc_proxy --vnc localhost:5901
+
+git add .
+git commit -m "Commit"
+
+git branch -M main
+git push -u origin main

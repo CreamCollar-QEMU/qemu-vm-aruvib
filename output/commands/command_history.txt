@@ -1,0 +1,22 @@
+2025-04-30 09:36:17 ./command-tracker.sh 
+2025-04-30 09:36:26 source ~/.bashrc
+2025-04-30 09:36:33 ls
+2025-04-30 09:37:19 ./download.sh 
+2025-04-30 09:38:10 ls
+2025-04-30 09:38:16 ls
+2025-04-30 09:41:13 qemu-system-x86_64 -m 2048 -boot d -cdrom \qemu1\os_images\linux\alpine-3.16.iso
+2025-04-30 09:42:51 qemu-system-x86_64   -cdrom classroom\qemu1\os_images\linux\alpine-3.16.iso   -m 2048   -boot d   -enable-kvm   -vnc :1
+2025-04-30 09:43:02 qemu-system-x86_64   -cdrom \os_images\linux\alpine-3.16.iso   -m 2048   -boot d   -enable-kvm   -vnc :1
+2025-04-30 09:43:17 qemu-system-x86_64   -cdrom \qemu1\os_images\linux\alpine-3.16.iso   -m 2048   -boot d   -enable-kvm   -vnc :1
+2025-04-30 09:43:43 qemu-system-x86_64   -cdrom os_images\linux\alpine-3.16.iso   -m 2048   -boot d   -enable-kvm   -vnc :1
+2025-04-30 09:43:53 qemu-system-x86_64   -cdrom qemu1\os_images\linux\alpine-3.16.iso   -m 2048   -boot d   -enable-kvm   -vnc :1
+2025-04-30 09:44:17 qemu-system-x86_64   -cdrom os_images/linux/alpine-3.16.iso   -m 2048   -boot d   -enable-kvm   -vnc :1
+2025-04-30 09:44:34 qemu-system-x86_64   -cdrom /mnt/c/Users/AruviB/OneDrive\ -\ CreamCollar/Downloads/QEMU/QEMU/classroom/qemu1/os_images/linux/alpine-3.16.iso   -m 2048   -boot d   -enable-kvm   -vnc :1
+2025-04-30 09:45:06 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -m 2048 -boot d -vnc :1
+2025-04-30 09:47:23 qemu-system-x86_64   -cdrom os_images/linux/alpine-3.16.iso   -m 2048   -boot d   -enable-kvm   -display gtk
+2025-04-30 10:37:37 qemu-system-x86_64   -cdrom os_images/linux/alpine-3.16.iso   -m 2048   -boot d   -enable-kvm   -display sdl
+2025-04-30 10:37:55 qemu-system-x86_64  -machine type=q35,accel=kvm  -cpu host  -smp 4  -m 8G  -drive file=mydisk.qcow2,format=qcow2,if=virtio  -cdrom /mnt/d/Testing/arm64/ubuntu.iso  -device virtio-net-pci,netdev=net0  -netdev user,id=net0,hostfwd=tcp::2222-:22  -device ich9-intel-hda -device hda-duplex  -device qemu-xhci -device usb-tablet  -vga virtio
+2025-04-30 10:37:56 ls
+2025-04-30 10:38:18 qemu-img create -f qcow2 disk.qcow2 20G
+2025-04-30 10:38:20 ls
+2025-04-30 10:58:02 qemu-system-x86_64  -machine type=q35,accel=kvm  -cpu host  -smp 4  -m 8G  -drive file=disk.qcow2,format=qcow2,if=virtio  -cdrom classroom\qemu1\os_images\linux\alpine-3.16.iso  -device virtio-net-pci,netdev=net0  -netdev user,id=net0,hostfwd=tcp::2222-:22  -device ich9-intel-hda -device hda-duplex  -device qemu-xhci -device usb-tablet  -vga virtio

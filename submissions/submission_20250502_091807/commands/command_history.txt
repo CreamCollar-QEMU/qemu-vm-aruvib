@@ -82,3 +82,61 @@
 2025-05-02 04:59:54 qemu-system-x86_64   -cdrom os_images/linux/alpine-3.16.iso   -m 2048   -smp 2   -vnc :1
 2025-05-02 04:59:54 qemu-system-x86_64   -cdrom os_images/linux/alpine-3.16.iso   -m 2048   -smp 2   -vnc :1
 2025-05-02 04:59:55 qemu-system-x86_64   -cdrom os_images/linux/alpine-3.16.iso   -m 2048   -smp 2   -vnc :1
+2025-05-02 05:00:25 ./submit-assignment.sh 
+2025-05-02 05:03:13 cd ..
+2025-05-02 05:03:52 git add .
+2025-05-02 05:03:52 git commit -m "Initial commit for this folder"
+2025-05-02 05:13:47 cd ..
+2025-05-02 05:13:59 git status
+2025-05-02 05:14:27 git add submissions/
+2025-05-02 05:15:11 git commit -m "Add submissions folder"
+2025-05-02 05:15:12 git push
+2025-05-02 05:15:48 git add submissions/submission_20250502_050005/
+2025-05-02 05:18:19 cd ..
+2025-05-02 05:18:23 git add submissions/
+2025-05-02 05:18:23 git commit -m "Add assignment output folder"
+2025-05-02 05:18:26 git push
+2025-05-02 05:19:36 rm -rf submissions/.git
+2025-05-02 05:19:41 git add submissions/
+2025-05-02 05:19:41 git commit -m "Add assignment output folder"
+2025-05-02 05:19:43 git push
+2025-05-02 05:20:30 git rm --cached submissions
+2025-05-02 05:20:30 rm -rf submissions/.git
+2025-05-02 05:20:36 git add submissions/
+2025-05-02 05:20:36 git commit -m "Re-add submissions as a regular folder"
+2025-05-02 05:20:37 git push
+2025-05-02 05:24:03 qemu-system-x86_64   -cdrom ./os_images/linux/alpine-3.16.iso   -boot d   -m 512   -vnc :1   -nographic
+2025-05-02 05:29:40 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 novnc 1
+2025-05-02 05:29:50 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 vnc :1
+2025-05-02 05:30:01 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 novnc :1
+2025-05-02 05:30:24 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 novnc :1
+2025-05-02 05:32:26 docker build -t qemu-novnc .
+2025-05-02 05:32:30 qemu-system-x86_64   -cdrom /os-images/ubuntu.iso   -boot d   -m 2048   -smp 2   -vnc :1   -nographic
+2025-05-02 05:33:06 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 novnc :1
+2025-05-02 05:36:24 qemu-system-x86_64   -cdrom os_images/linux/alpine-3.16.iso   -boot d   -m 2048   -smp 2   -vnc :1
+2025-05-02 05:36:24 qemu-system-x86_64   -cdrom os_images/linux/alpine-3.16.iso   -boot d   -m 2048   -smp 2   -vnc :1
+2025-05-02 05:36:35 git add command.txt 
+2025-05-02 05:36:37 git push
+2025-05-02 05:37:44 git commit -m 
+2025-05-02 05:37:54 git commit -m "Commit"
+2025-05-02 05:38:19 git push
+2025-05-02 07:30:06 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 novnc :1
+2025-05-02 07:30:11 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 novnc :1
+2025-05-02 09:01:30 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 novnc :1
+2025-05-02 09:08:43 docker login
+2025-05-02 09:09:36 docker build -t qemu-virtualization .
+2025-05-02 09:09:37 docker run -it --rm qemu-virtualization
+2025-05-02 09:11:09 docker run -it --rm -e USER=root qemu-virtualization
+2025-05-02 09:11:34 clear
+2025-05-02 09:11:36 docker build -t qemu-virtualization .
+2025-05-02 09:11:39 docker run -it --rm -e USER=root qemu-virtualization
+2025-05-02 09:11:52 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 -vnc :1
+2025-05-02 09:12:01 ./command-tracker.sh 
+2025-05-02 09:12:05 source ~/.bashrc
+2025-05-02 09:12:14 ./download.sh 
+2025-05-02 09:12:24 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 novnc :1
+2025-05-02 09:12:36 ./utils/novnc_proxy --vnc localhost:5901
+2025-05-02 09:13:13 git clone https://github.com/novnc/noVNC.git
+2025-05-02 09:13:50 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 -vnc :1
+2025-05-02 09:15:04 ./download.sh 
+2025-05-02 09:16:49 qemu-system-x86_64 -cdrom os_images/linux/arch-2022.07.01.iso -boot d -m 512 -vnc :1

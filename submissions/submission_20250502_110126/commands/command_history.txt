@@ -221,3 +221,32 @@
 2025-05-02 10:10:52 qemu-system-x86_64 -cdrom os_images/linux/ubuntu-22.04.iso -boot d -m 512 -vnc :1
 2025-05-02 10:11:08 ./download.sh 
 2025-05-02 10:13:33 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 -vnc :1
+2025-05-02 10:14:05 ./submit-assignment.sh 
+2025-05-02 10:14:53 git add submissions
+2025-05-02 10:14:53 git commit -m "Commit"
+2025-05-02 10:14:53 git commit -m "Commit"
+2025-05-02 10:14:53 git branch -M main
+2025-05-02 10:14:54 git push -u origin main
+2025-05-02 10:16:06 clear
+2025-05-02 10:16:28 git add command.txt 
+2025-05-02 10:16:30 git push
+2025-05-02 10:16:32 clear
+2025-05-02 10:17:34 docker login
+2025-05-02 10:17:36 docker build -t qemu-virtualization .
+2025-05-02 10:17:39 docker run -it --rm -e USER=root qemu-virtualization
+2025-05-02 10:17:59 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 -vnc :1
+2025-05-02 10:18:00 clear
+2025-05-02 10:18:21 ./command-tracker.sh 
+2025-05-02 10:18:30 source ~/.bashrc
+2025-05-02 10:18:58 clear
+2025-05-02 10:55:40 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 novnc :1
+2025-05-02 10:55:43 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 novnc :1
+2025-05-02 10:56:39 docker login
+2025-05-02 10:56:41 docker build -t qemu-virtualization .
+2025-05-02 10:56:51 docker run -it --rm -e USER=root qemu-virtualization
+2025-05-02 10:57:04 ./command-tracker.sh 
+2025-05-02 10:57:14 source ~/.bashrc
+2025-05-02 10:57:28 ls
+2025-05-02 10:58:48 ./download.sh 
+2025-05-02 10:59:14 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 novnc :1
+2025-05-02 11:01:09 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 -vnc :1

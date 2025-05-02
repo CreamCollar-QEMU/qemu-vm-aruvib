@@ -198,3 +198,10 @@
 2025-05-02 10:02:21 clear
 2025-05-02 10:02:59 ./download.sh 
 2025-05-02 10:03:02 clear
+2025-05-02 10:03:14 git add .
+2025-05-02 10:03:14 git commit -m "Commit"
+2025-05-02 10:03:14 git commit -m "Commit"
+2025-05-02 10:03:14 git branch -M main
+2025-05-02 10:03:15 git push -u origin main
+2025-05-02 10:03:24 clear
+2025-05-02 10:03:47 ./download.sh 

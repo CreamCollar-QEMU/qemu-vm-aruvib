@@ -49,14 +49,15 @@ download_linux() {
     read -p "Enter choice [0-5]: " choice
     
     case $choice in
-        1) download_file "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-11.0.0-amd64-netinst.iso" "os_images/linux/debian-11.iso" "Debian 11" ;;
-        2) download_file "https://releases.ubuntu.com/22.04/ubuntu-22.04-desktop-amd64.iso" "os_images/linux/ubuntu-22.04.iso" "Ubuntu 22.04" ;;
-        3) download_file "https://dl.fedoraproject.org/pub/fedora/linux/releases/36/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-36-1.5.iso" "os_images/linux/fedora-36.iso" "Fedora 36" ;;
-        4) download_file "https://dl-cdn.alpinelinux.org/alpine/v3.16/releases/x86_64/alpine-virt-3.16.0-x86_64.iso" "os_images/linux/alpine-3.16.iso" "Alpine Linux 3.16" ;;
-        5) download_file "https://archive.archlinux.org/iso/2022.07.01/archlinux-2022.07.01-x86_64.iso" "os_images/linux/arch-2022.07.01.iso" "Arch Linux (July 2022)" ;;
+        1) download_file "https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/debian-live-12.5.0-amd64-xfce.iso" "os_images/linux/debian-live-xfce.iso" "Debian 12 XFCE (Live)" ;;
+        2) download_file "https://releases.ubuntu.com/22.04/ubuntu-22.04.3-desktop-amd64.iso" "os_images/linux/ubuntu-22.04.iso" "Ubuntu 22.04 Desktop" ;;
+        3) download_file "https://download.fedoraproject.org/pub/fedora/linux/releases/39/Workstation/x86_64/iso/Fedora-Workstation-Live-x86_64-39-1.5.iso" "os_images/linux/fedora-39.iso" "Fedora 39 Workstation" ;;
+        4) download_file "https://dl-cdn.alpinelinux.org/alpine/v3.16/releases/x86_64/alpine-standard-3.16.0-x86_64.iso" "os_images/linux/alpine-3.16.iso" "Alpine Linux 3.16 (standard)" ;;
+        5) download_file "https://archive.archlinux.org/iso/2022.07.01/archlinux-2022.07.01-x86_64.iso" "os_images/linux/arch-2022.07.01.iso" "Arch Linux (CLI only)" ;;
+        6) download_file "https://tinycorelinux.net/14.x/x86/release/CorePlus/CorePlus-current.iso" "os_images/linux/tinycore.iso" "TinyCore Linux (GUI)" ;;
         0) return ;;
-        *) echo "Invalid option. Please try again." ;;
     esac
+
 }
 
 # BSD variants available for download

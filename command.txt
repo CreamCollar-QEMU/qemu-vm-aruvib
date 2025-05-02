@@ -1,3 +1,4 @@
+ENV setup
 docker login
 docker build -t qemu-virtualization .
 docker run -it --rm -e USER=root qemu-virtualization
@@ -9,7 +10,7 @@ git clone https://github.com/novnc/noVNC.git
 cd noVNC
 ./utils/novnc_proxy --vnc localhost:5901
 
-git add .
+git add submissions
 git commit -m "Commit"
 
 git branch -M main

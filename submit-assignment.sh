@@ -53,7 +53,6 @@ create_submission() {
     done
     
     # Generate activity summary based on command history
-    ACTIVITY_SUMMARY=""
     if [ -f "output/commands/command_history.txt" ]; then
         echo "Analyzing your work activity..."
         
@@ -70,29 +69,25 @@ create_submission() {
         # Check for QEMU specific commands
         QEMU_COMMANDS=$(grep -c "qemu" output/commands/command_history.txt)
         
-        # Generate the summary
-        ACTIVITY_SUMMARY="## Activity Analysis\n\n"
-        ACTIVITY_SUMMARY+="* Total commands executed: $TOTAL_COMMANDS\n"
-        ACTIVITY_SUMMARY+="* Unique commands used: $UNIQUE_COMMANDS\n"
-        ACTIVITY_SUMMARY+="* QEMU-related commands: $QEMU_COMMANDS\n\n"
-        ACTIVITY_SUMMARY+="### Most Frequently Used Commands:\n\n"
-        ACTIVITY_SUMMARY+="```\n$MOST_USED\n```\n\n"
-
-        # Add assessment of exploration depth
+        # Generate activity assessment
         if [ $QEMU_COMMANDS -gt 20 ]; then
-            ACTIVITY_SUMMARY+="Your exploration shows in-depth use of QEMU virtualization tools.\n"
+            EXPLORATION_ASSESSMENT="Your exploration shows in-depth use of QEMU virtualization tools."
         elif [ $QEMU_COMMANDS -gt 10 ]; then
-            ACTIVITY_SUMMARY+="Your exploration shows moderate use of QEMU virtualization tools.\n"
+            EXPLORATION_ASSESSMENT="Your exploration shows moderate use of QEMU virtualization tools."
         elif [ $QEMU_COMMANDS -gt 0 ]; then
-            ACTIVITY_SUMMARY+="Your exploration shows basic use of QEMU virtualization tools.\n"
+            EXPLORATION_ASSESSMENT="Your exploration shows basic use of QEMU virtualization tools."
         else
-            ACTIVITY_SUMMARY+="Your command history doesn't show direct use of QEMU commands. Make sure to document any manual VM configurations you made.\n"
+            EXPLORATION_ASSESSMENT="Your command history doesn't show direct use of QEMU commands. Make sure to document any manual VM configurations you made."
         fi
     else
-        ACTIVITY_SUMMARY="No command history found to analyze activity."
+        TOTAL_COMMANDS="N/A"
+        UNIQUE_COMMANDS="N/A"
+        QEMU_COMMANDS="N/A"
+        MOST_USED="No command history available"
+        EXPLORATION_ASSESSMENT="No command history found to analyze activity."
     fi
     
-    # Create submission README
+    # Create submission README with proper markdown formatting
     cat > "$SUBMISSION_DIR/README.md" << EOF
 # QEMU Exploration Assignment Submission
 
@@ -104,9 +99,22 @@ create_submission() {
 ## Summary
 $SUMMARY
 
-$ACTIVITY_SUMMARY
+## Activity Analysis
+
+* Total commands executed: $TOTAL_COMMANDS
+* Unique commands used: $UNIQUE_COMMANDS
+* QEMU-related commands: $QEMU_COMMANDS
+
+### Most Frequently Used Commands:
+
+\`\`\`
+$MOST_USED
+\`\`\`
+
+$EXPLORATION_ASSESSMENT
 
 ## Contents
+
 - commands/: History of all commands executed
 - screenshots/: Captures of your QEMU exploration
 - videos/: Demonstration recordings of your work
@@ -127,3 +135,12 @@ EOF
 
 # Call the function
 create_submission
+
+# Commit the new submission to git if available
+if command -v git &> /dev/null && [ -d ".git" ]; then
+    SUBMISSION_ID=$(ls -t submissions | head -1)
+    git add submissions
+    git commit -m "Add submission: $SUBMISSION_ID"
+    git branch -M main
+    git push -u origin main 2>/dev/null || echo "Git push failed. You may need to set up a remote repository."
+fi

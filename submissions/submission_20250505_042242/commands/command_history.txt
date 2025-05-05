@@ -250,3 +250,53 @@
 2025-05-02 10:58:48 ./download.sh 
 2025-05-02 10:59:14 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 novnc :1
 2025-05-02 11:01:09 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 -vnc :1
+2025-05-02 11:01:53 ./submit-assignment.sh 
+2025-05-02 11:02:11 git add submissions
+2025-05-02 11:02:11 git commit -m "Commit"
+2025-05-02 11:02:11 git commit -m "Commit"
+2025-05-02 11:02:11 git branch -M main
+2025-05-02 11:02:12 git push -u origin main
+2025-05-03 14:35:27 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 novnc :1
+2025-05-03 14:36:01 wget -O os_images/lubuntu.iso https://cdimage.ubuntu.com/lubuntu/releases/22.04/release/lubuntu-22.04.3-desktop-amd64.iso
+2025-05-03 14:37:43 cd ..
+2025-05-03 14:37:46 chmod -R +x .
+2025-05-03 14:37:50 wget -O os_images/ubuntu-22.04.iso https://releases.ubuntu.com/22.04/ubuntu-22.04.3-desktop-amd64.iso
+2025-05-03 14:38:19 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 novnc :1
+2025-05-03 14:38:24 ./utils/novnc_proxy --vnc localhost:5901
+2025-05-03 14:38:35 clear
+2025-05-03 14:38:38 docker login
+2025-05-03 14:38:41 docker build -t qemu-virtualization .
+2025-05-03 14:38:44 docker run -it --rm -e USER=root qemu-virtualization
+2025-05-03 14:38:51 chmod -R +x .
+2025-05-03 14:39:00 wget -O os_images/ubuntu-22.04.iso https://releases.ubuntu.com/22.04/ubuntu-22.04.3-desktop-amd64.iso
+2025-05-03 14:39:27 wget -O os_images/ubuntu-22.04.iso https://releases.ubuntu.com/22.04/ubuntu-22.04.4-desktop-amd64.iso
+2025-05-03 14:42:26 ./utils/novnc_proxy --vnc localhost:5901
+2025-05-03 14:42:39 git clone https://github.com/novnc/noVNC.git
+2025-05-03 14:43:00 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 vnc :1
+2025-05-03 14:44:40 ./utils/novnc_proxy --vnc localhost:5901
+2025-05-03 14:44:43 ./utils/novnc_proxy --vnc localhost:5901
+2025-05-03 14:45:11 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 -vnc :1
+2025-05-03 14:45:25 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 -vnc :1
+2025-05-05 04:05:51 ./utils/novnc_proxy --vnc localhost:5901
+2025-05-05 04:06:04 docker login
+2025-05-05 04:06:06 docker build -t qemu-virtualization .
+2025-05-05 04:06:14 docker run -it --rm -e USER=root qemu-virtualization
+2025-05-05 04:07:41 ls
+2025-05-05 04:07:52 cd chmod -R +x
+2025-05-05 04:07:58 chmod -R +x
+2025-05-05 04:08:03 chmod -R +x .
+2025-05-05 04:10:14 clear
+2025-05-05 04:10:14 ls
+2025-05-05 04:10:33 chmod -R +x .
+2025-05-05 04:10:45 ./start.sh 
+2025-05-05 04:11:14 ls
+2025-05-05 04:12:21 ./screenshot-helper.sh 
+2025-05-05 04:12:42 ./screenshot-helper.sh 
+2025-05-05 04:13:10 clear
+2025-05-05 04:16:24 ./download.sh 
+2025-05-05 04:17:00 ./utils/novnc_proxy --vnc localhost:5901
+2025-05-05 04:18:38 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 -vnc :1
+2025-05-05 04:18:56 ./download.sh 
+2025-05-05 04:19:52 ./download.sh 
+2025-05-05 04:20:03 ./submit-assignment.sh 
+2025-05-05 04:21:08 ./submit-assignment.sh ./submit-assignment.sh 

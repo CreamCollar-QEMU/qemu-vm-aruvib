@@ -1,0 +1,5 @@
+2025-05-05 06:47:53 source ~/.bashrc
+2025-05-05 06:48:09 ./download.sh 
+2025-05-05 06:48:29 qemu-system-x86_64 -cdrom os_images/linux/alpine-3.16.iso -boot d -m 512 -vnc :1
+2025-05-05 06:48:48 # sd
+2025-05-05 06:48:54 git add command.txt 

@@ -4,7 +4,7 @@
       "ms-azuretools.vscode-docker",
       "ms-vscode-remote.remote-containers"
     ],
-    "postCreateCommand": "chmod +x start.sh",
+    "postCreateCommand": "sudo apt update && sudo apt install -y qemu-system-x86 && chmod +x start.sh",
     "features": {
       "docker-in-docker": "latest"
     }
